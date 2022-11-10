@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Page Home{% endblock %}
+{% block customCSS %}
+    <!-- <link
+        rel="stylesheet"
+        href="{{ url_for('static',filename='css/home.css') }}"
+        > -->
+{% endblock %}
+{% block body%}
+    <canvas 
+        width="500" 
+        height="500"
+        id="lienzo">
+    </canvas>
+    <script 
+        src="{{ url_for('static', filename='script/matrix.js') }}"  
+        >
+  </script>
+{% endblock %}

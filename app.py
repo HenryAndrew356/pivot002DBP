@@ -4,15 +4,15 @@ app=Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('base.html')
+    print("Ingreso al Home")
+    return render_template('home.html')
 
 @app.route('/register/')
 def register():
     return render_template('register.html')
 
-# @app.route('/home')
-# def home_page():
-#     return render_template('home.html')
+@app.route('/matrix/')
+def matrix():
+    return render_template('matrix.html')
 
-# @app.route('/app')
-# def
+# 
