@@ -6,6 +6,10 @@ app=Flask(__name__)
 def home():
     return render_template('home.html')
 
+@app.route('/formToCv')
+def formToCv():
+    return render_template('formToCv.html')
+
 @app.route('/register/')
 def register():
     return render_template('register.html')
