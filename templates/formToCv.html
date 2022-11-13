@@ -6,6 +6,8 @@
         rel="stylesheet" 
         href="{{ url_for('static',filename='css/formToCV.css') }}"
         >
+    
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
 {% endblock %}
 {% block body %}
     <div class="container bg-light">
@@ -13,8 +15,8 @@
             <div class="py-3 text-center">
                 <img 
                     class="mb-1" 
-                    src="{{ url_for('static',filename='img/test02.png') }}" width="150" 
-                    height="150">
+                    src="{{ url_for('static',filename='img/test02.png') }}" width="120" 
+                    height="120">
             <h2>Formulario para Registro</h2>
             </div>
                 <div class="row g-12">
@@ -84,11 +86,11 @@
                                     <label 
                                         for="country" 
                                         class="form-label"
-                                        >Nacionalidad
+                                        >Pais
                                     </label>
                                     <select class="form-select" id="countryA" required>
                                         <option value="">Seleccione ...</option>
-                                        <option>United States</option>
+                                        <option>Estados Unidos</option>
                                         <option>Peru</option>
                                         <option>España</option>
                                         <option>Francia</option>
@@ -141,14 +143,19 @@
                             <label class="form-check-label" for="save-info">Big Data</label>
                         </div>
 
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="inProcessF">
+                            <label class="form-check-label" for="save-info"> En Proceso de Aprendizaje</label>
+                        </div>
+
                         <hr class="my-4">
 
                         <h4 class="mb-3">Nivel de Ingles</h4>
                         <!-- <h4 class="mb-3">Payment</h4> -->
 
-                        <div class="my-3">
+                        <div class="my-3" style="border: solid 2px red;">
                             <div class="form-check">
-                                <input id="fluidFF" name="nivelEnglish" type="radio" class="form-check-input" checked required>
+                                <input id="fluidFF" name="nivelEnglish" type="radio" class="form-check-input" required>
                                 <!-- <label class="form-check-label" for="credit">Credit card</label> -->
                                 <label class="form-check-label" for="fluidF">Fluido</label>
                             </div>
@@ -162,34 +169,46 @@
                                 <!-- <label class="form-check-label" for="paypal">PayPal</label> -->
                                 <label class="form-check-label" for="intermediateF">Intermedio</label>
                             </div>
+                            <div class="form-check">
+                                <input id="basicFF" name="nivelEnglish" type="radio" class="form-check-input" required>
+                                <!-- <label class="form-check-label" for="paypal">PayPal</label> -->
+                                <label class="form-check-label" for="intermediateF">Basico</label>
+                            </div>
                         </div>
 
+                        <hr class="my-4">
                         <!--  -->
                         <!--  -->
                         <h4 class="mb-3">Lenguajes de Programacion</h4>
                         <div class="my-3">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radio01" id="c++F" value="option1" checked>
+                                <input class="form-check-input" type="radio" name="radio01" id="c++F" value="C++Value">
                                 <label class="form-check-label" for="exampleRadios1">
                                     C++
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radio02" id="c#F" value="option2">
+                                <input class="form-check-input" type="radio" name="radio02" id="c#F" value="C#Value">
                                 <label class="form-check-label" for="exampleRadios2">
                                     C#
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radio03" id="rubyF" value="option2">
+                                <input class="form-check-input" type="radio" name="radio03" id="rubyF" value="rubyValue">
                                 <label class="form-check-label" for="exampleRadios2">
                                     Ruby
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radio04" id="PythonF" value="option2">
+                                <input class="form-check-input" type="radio" name="radio04" id="PythonF" value="PythonValue">
                                 <label class="form-check-label" for="exampleRadios2">
                                     Python
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio05" id="noneF" value="noneValue">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    Ninguno
                                 </label>
                             </div>
                         </div>
@@ -222,5 +241,6 @@
             src="{{ url_for('static', filename='script/controllerCv.js') }}"  
             >
         </script>
+        
     </div>
 {% endblock%}
