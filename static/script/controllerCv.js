@@ -1,6 +1,5 @@
 
 function getData(){
-    console.log("Ingreso al COnaol.el")
     const name=document.getElementById('firstNameF').value;
     const lastName=document.getElementById('lastNameF').value;
     const username=document.getElementById('usernameF').value;
@@ -9,13 +8,12 @@ function getData(){
     const telefono=document.getElementById('telefonoF').value;
     
     // Get Data form Country
-    var country=document.getElementById('countryA');
-    var index=country.value;
-    var textCountry=country.options[country.selectedIndex].text;
+    // var country=document.getElementById('countryA');
+    // var index=country.value;
+    // var textCountry=country.options[country.selectedIndex].text;
+    // console.log(country);
     // console.log(index);
-    console.log(country);
-    console.log(index);
-    console.log(textCountry);
+    // console.log(textCountry);
     // console.log(textCountry);
 }
 // Example starter JavaScript for disabling form submissions if there are invalid fields

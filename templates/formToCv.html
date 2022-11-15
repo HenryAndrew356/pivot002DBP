@@ -6,7 +6,7 @@
         rel="stylesheet" 
         href="{{ url_for('static',filename='css/formToCV.css') }}"
         >
-    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
 {% endblock %}
 {% block body %}
@@ -21,7 +21,6 @@
             </div>
                 <div class="row g-12">
                 <div class="col-lg-12">
-                    <!-- <h4 class="mb-3">Billing address</h4> -->
                     <form class="needs-validation" novalidate>
                         <div class="row g-3">
                             <div class="col-sm-6">
@@ -54,7 +53,7 @@
                                 </label>
                                 <div class="input-group has-validation">
                                     <span class="input-group-text">@</span>
-                                    <input type="text" class="form-control" id="usernameF" placeholder="Ejemplo: fernandoRivera007" >
+                                    <input type="text" class="form-control" id="usernameF" placeholder="Ejemplo: fernandoRivera007" required>
                                     <div class="invalid-feedback">
                                         Tu nombre de usuario es requerido.
                                     </div>
@@ -77,29 +76,29 @@
                                 </div>
                             </div>
                 <!-- dasda -->
-                                <div class="col-12">
-                                    <label for="address2" class="form-label">Telefono<span class="text-muted">(Optional)</span></label>
-                                    <input type="number" class="form-control" id="telefonoF" placeholder="Ejemplo: 938564789">
-                                </div>
+                            <div class="col-12">
+                                <label for="address2" class="form-label">Telefono<span class="text-muted"> (Opcional)</span></label>
+                                <input type="number" class="form-control" id="telefonoF" placeholder="Ejemplo: 938564789">
+                            </div>
 
-                                <div class="col-md-6">
-                                    <label 
-                                        for="country" 
-                                        class="form-label"
-                                        >Pais
-                                    </label>
-                                    <select class="form-select" id="countryA" required>
-                                        <option value="">Seleccione ...</option>
-                                        <option>Estados Unidos</option>
-                                        <option>Peru</option>
-                                        <option>España</option>
-                                        <option>Francia</option>
-                                        <option>Puerto Rico</option>
-                                    </select>
-                                    <div class="invalid-feedback">
-                                        Please select a valid country.
-                                    </div>
+                            <div class="col-md-6">
+                                <label 
+                                    for="country" 
+                                    class="form-label"
+                                    >Pais
+                                </label>
+                                <select class="form-select" id="countryA" required>
+                                    <option value="">Seleccione ...</option>
+                                    <option>Estados Unidos</option>
+                                    <option>Peru</option>
+                                    <option>España</option>
+                                    <option>Francia</option>
+                                    <option>Puerto Rico</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Por favor ingrese un pais valido.
                                 </div>
+                            </div>
 
                             <div class="col-md-6">
                                 <label for="country" class="form-label">Aptitudes</label>
@@ -111,118 +110,116 @@
                                         <option>Responsabilidad</option>
                                         <option>Puntualidad</option>
                                         <option>Resiliencia</option>
-                                        <option>Creatividad</option>
+                                          <option>Creatividad</option>
                                         <option>Trabajo en Equipo</option>
                                 </select>
                                 <div class="invalid-feedback">
-                                    Please select a valid country.
+                                    Por favor ingrese una aptitud.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <hr class="my-3"> -->
+                        <div class="threbox">
+                            <div class="col-md-4" >
+                                <h4 class="mb-3" style="text-align: center;">Habilidades</h4>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="frontEndF">
+                                    <label class="form-check-label" for="same-address">FrontEnd</label>
+                                </div>
+        
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="backEndF">
+                                    <label class="form-check-label" for="save-info">BackEnd</label>
+                                </div>
+        
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="algorithmsF">
+                                    <label class="form-check-label" for="save-info">Algorithms</label>
+                                </div>
+        
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="bidDataF">
+                                    <label class="form-check-label" for="save-info">Big Data</label>
+                                </div>
+        
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="inProcessF">
+                                    <label class="form-check-label" for="save-info"> En Proceso de Aprendizaje</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <h4 class="mb-3" style="text-align: center;">Nivel de Ingles</h4>
+                                <div class="my-3">
+                                    <div class="form-check">
+                                        <input id="fluidFF" name="nivelEnglish" type="radio" class="form-check-input" required>
+                                        <!-- <label class="form-check-label" for="credit">Credit card</label> -->
+                                        <label class="form-check-label" for="fluidF">Fluido</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input id="advanceFF" name="nivelEnglish" type="radio" class="form-check-input" required>
+                                            <!-- <label class="form-check-label" for="debit">Debit card</label> -->
+                                        <label class="form-check-label" for="advanceF">Avanzado</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input id="intermediateFF" name="nivelEnglish" type="radio" class="form-check-input" required>
+                                            <!-- <label class="form-check-label" for="paypal">PayPal</label> -->
+                                        <label class="form-check-label" for="intermediateF">Intermedio</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input id="basicFF" name="nivelEnglish" type="radio" class="form-check-input" required>
+                                            <!-- <label class="form-check-label" for="paypal">PayPal</label> -->
+                                        <label class="form-check-label" for="intermediateF">Basico</label>
+                                    </div>
                                 </div>
                             </div>
 
-                        </div>
-                        
-                        <hr class="my-4">
-                        <h4 class="mb-3">Habilidades</h4>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="frontEndF">
-                            <label class="form-check-label" for="same-address">FrontEnd</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="backEndF">
-                            <label class="form-check-label" for="save-info">BackEnd</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="algorithmsF">
-                            <label class="form-check-label" for="save-info">Algorithms</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="bidDataF">
-                            <label class="form-check-label" for="save-info">Big Data</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="inProcessF">
-                            <label class="form-check-label" for="save-info"> En Proceso de Aprendizaje</label>
-                        </div>
-
-                        <hr class="my-4">
-
-                        <h4 class="mb-3">Nivel de Ingles</h4>
-                        <!-- <h4 class="mb-3">Payment</h4> -->
-
-                        <div class="my-3" style="border: solid 2px red;">
-                            <div class="form-check">
-                                <input id="fluidFF" name="nivelEnglish" type="radio" class="form-check-input" required>
-                                <!-- <label class="form-check-label" for="credit">Credit card</label> -->
-                                <label class="form-check-label" for="fluidF">Fluido</label>
-                            </div>
-                            <div class="form-check">
-                                <input id="advanceFF" name="nivelEnglish" type="radio" class="form-check-input" required>
-                                <!-- <label class="form-check-label" for="debit">Debit card</label> -->
-                                <label class="form-check-label" for="advanceF">Avanzado</label>
-                            </div>
-                            <div class="form-check">
-                                <input id="intermediateFF" name="nivelEnglish" type="radio" class="form-check-input" required>
-                                <!-- <label class="form-check-label" for="paypal">PayPal</label> -->
-                                <label class="form-check-label" for="intermediateF">Intermedio</label>
-                            </div>
-                            <div class="form-check">
-                                <input id="basicFF" name="nivelEnglish" type="radio" class="form-check-input" required>
-                                <!-- <label class="form-check-label" for="paypal">PayPal</label> -->
-                                <label class="form-check-label" for="intermediateF">Basico</label>
+                            <!-- <hr class="my-4"> -->
+                            <div class="col-md-4" >
+                                <h4 class="mb-3" style="text-align: center;">Lenguajes de Programacion</h4>
+                                <div class="my-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radio01" id="c++F" value="C++Value">
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            C++
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radio02" id="c#F" value="C#Value">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            C#
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radio03" id="rubyF" value="rubyValue">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            Ruby
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radio04" id="PythonF" value="PythonValue">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            Python
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radio05" id="noneF" value="noneValue">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            Ninguno
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <hr class="my-4">
+                        <!-- Linea seperadora -->
+                        <!-- <hr class="my-4"> -->
                         <!--  -->
-                        <!--  -->
-                        <h4 class="mb-3">Lenguajes de Programacion</h4>
-                        <div class="my-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radio01" id="c++F" value="C++Value">
-                                <label class="form-check-label" for="exampleRadios1">
-                                    C++
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radio02" id="c#F" value="C#Value">
-                                <label class="form-check-label" for="exampleRadios2">
-                                    C#
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radio03" id="rubyF" value="rubyValue">
-                                <label class="form-check-label" for="exampleRadios2">
-                                    Ruby
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radio04" id="PythonF" value="PythonValue">
-                                <label class="form-check-label" for="exampleRadios2">
-                                    Python
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radio05" id="noneF" value="noneValue">
-                                <label class="form-check-label" for="exampleRadios2">
-                                    Ninguno
-                                </label>
-                            </div>
-                        </div>
-
-                        <hr class="my-4">
-
                         <button 
-                            class="w-100 btn btn-outline-success" 
+                            class="w-100 btn btn-outline-success"
                             type="submit"
                             id="buttonF"
                             onclick="getData()"
                             >
                             <h4>Ingresar y confirmar informacion</h4>
-                            
                         </button>
                     </form>
                 </div>
