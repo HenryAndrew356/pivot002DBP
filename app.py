@@ -16,7 +16,8 @@ def matrix():
 # cvOfForm
 @app.route('/cvOfForm/')
 def cvOfForm():
-    return render_template('cvOfForm.html')
+    textField001="TxtFieldTest"
+    return render_template('cvOfForm.html',field001=textField001)
 
 if __name__=='__main__':
     app.run()
