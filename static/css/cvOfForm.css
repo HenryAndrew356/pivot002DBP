@@ -56,15 +56,15 @@ h3{
     background-color: rgba(204, 204, 204, 0.955);
     text-align: left;
     color: white;
-    height: 750px;
+    /* height: 750px; */
     border: 1px solid black;
-    height: 760px;
+    /* height: 760px; */
 }
 
 .child02{
     width: 498px;
     border: 1px solid black;
-    height: 760px;
+    /* height: 760px; */
 }
 
 .type0{

@@ -1,4 +1,3 @@
-
 function getData(){
     const name=document.getElementById('firstNameF').value;
     const lastName=document.getElementById('lastNameF').value;

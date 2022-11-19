@@ -21,7 +21,7 @@
             </div>
                 <div class="row g-12">
                 <div class="col-lg-12">
-                    <form class="needs-validation" novalidate>
+                    <form class="needs-validation" novalidate >
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <label for="firstName" class="form-label">Nombres</label>
@@ -53,7 +53,7 @@
                                 </label>
                                 <div class="input-group has-validation">
                                     <span class="input-group-text">@</span>
-                                    <input type="text" class="form-control" id="usernameF" placeholder="Ejemplo: fernandoRivera007" required>
+                                    <input type="text" class="form-control" id="usernameF" placeholder="Ejemplo: fernandoRivera007">
                                     <div class="invalid-feedback">
                                         Tu nombre de usuario es requerido.
                                     </div>
@@ -62,7 +62,7 @@
 
                             <div class="col-12">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="emailF" placeholder="Ejemplo: fernando.rivera@ucsm.edu.pe">
+                                <input type="email" class="form-control" id="emailF" placeholder="Ejemplo: fernando.rivera@ucsm.edu.pe" required>
                                 <div class="invalid-feedback">
                                     Porfavor ingrese un correo electronico valido.
                                 </div>
@@ -78,7 +78,11 @@
                 <!-- dasda -->
                             <div class="col-12">
                                 <label for="address2" class="form-label">Telefono<span class="text-muted"> (Opcional)</span></label>
-                                <input type="number" class="form-control" id="telefonoF" placeholder="Ejemplo: 938564789">
+                                <input 
+                                    type="number" class="form-control" id="telefonoF" placeholder="Ejemplo: 938564789"
+                                    max="999999999"
+                                    min="000000000"
+                                    >
                             </div>
 
                             <div class="col-md-6">
