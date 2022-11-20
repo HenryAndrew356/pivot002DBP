@@ -29,6 +29,24 @@ function getData(){
           event.stopPropagation()
         }
         form.classList.add('was-validated')
+        
       }, false)
     })
   })()
+
+
+    // Problemas para reconocer "$" <-- "Its nod defined"
+
+
+var your_data = {
+  name:"AndrewFieldName"
+}
+fetch(`${window.origin}/cvOfForm`, {
+  method: "POST",
+  credentials: "include",
+  body: JSON.stringify(your_data),
+  cache: "no-cache",
+  headers: new Headers({
+    "content-type": "application/json"
+  })
+})

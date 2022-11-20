@@ -53,7 +53,7 @@
                                 </label>
                                 <div class="input-group has-validation">
                                     <span class="input-group-text">@</span>
-                                    <input type="text" class="form-control" id="usernameF" placeholder="Ejemplo: fernandoRivera007" required>
+                                    <input type="text" class="form-control" id="usernameF" placeholder="Ejemplo: fernandoRivera007">
                                     <div class="invalid-feedback">
                                         Tu nombre de usuario es requerido.
                                     </div>
@@ -62,7 +62,7 @@
 
                             <div class="col-12">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="emailF" placeholder="Ejemplo: fernando.rivera@ucsm.edu.pe">
+                                <input type="email" class="form-control" id="emailF" required placeholder="Ejemplo: fernando.rivera@ucsm.edu.pe">
                                 <div class="invalid-feedback">
                                     Porfavor ingrese un correo electronico valido.
                                 </div>
@@ -217,7 +217,7 @@
                             class="w-100 btn btn-outline-success"
                             type="submit"
                             id="buttonF"
-                            onclick="getData()"
+                            
                             >
                             <h4>Ingresar y confirmar informacion</h4>
                         </button>
@@ -238,6 +238,21 @@
             src="{{ url_for('static', filename='script/controllerCv.js') }}"  
             >
         </script>
-        
+        <script src="https://code.jquery.com/jquery-3.1.0.js" ></script>    
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type=text/javascript>
+                $(function() {
+                $('#buttonF').on('click', function(e) {
+                    e.preventDefault()
+                    console.log("Ingreso")
+                    $.getJSON('/cvOfForm',
+                        function(data) {
+                    });
+                    return false;
+                });
+                });
+        </script>
     </div>
 {% endblock%}
